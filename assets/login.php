@@ -3,7 +3,7 @@
 $login = false;
 $error = false;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        include 'assets/db.php';
+        include 'db.php';
         $Username = $_POST['Username'];
         $password = $_POST['password'];
         $exit = false;

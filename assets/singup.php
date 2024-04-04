@@ -2,7 +2,7 @@
 $login = false;
 $error = false;
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
+    include 'db.php';
     $username = $_POST["Username"];
     $password = $_POST["password"]; 
     

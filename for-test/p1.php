@@ -3,58 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP_Loops</title>
+    <title>functions</title>
 </head>
 <body>
     <?php
-    $age = 70;
+//    function proMark($markArr) {
+//     $sum = 0;
+//     foreach ($markArr as $value) {
+//         $sum  += $value;
+//     }
+//     return $sum;
+//    }
 
-    // if($age>=25) {
-    //     echo "you can drink alcohol.";
-    // }elseif($age>=65){
-    //     echo "you can not drink alcohol.";
-    // }else{
-    //     echo "nikkal";
-    // }
-    
-    switch($age){
-        case $age<=12:
-            echo "you are just 12 years old.";
-            break;
-        case $age<=25:    
-            echo "you are 25 years old.";
-            break;
-        case $age<=65;
-            echo "you are very old.";    
+//    $aman = [94, 96, 93, 91, 65, 97];
+//    $mark = proMark($aman);
+//    echo "you goat $mark out of 600.";
+
+    function proTipp($markArr) {
+        $sum = 0;
+        foreach ($markArr as $value) {
+            $sum += $value;
+        }
+        return $sum;
     }
 
-    // $a = 1;
+    $aman = [53, 65, 76, 98, 45, 89];
+    $mark = proTipp($aman);
 
-    // while($a<=50){
-    //     echo $a;
-    //     echo "<br>";
-    //     $a++;
-    // }
+    $vivek = [63, 75, 76, 97, 95, 89];
+    $vmark = proTipp($vivek);
 
-    // for ($a=1; $a <= 50 ; $a++) { 
-    //     echo $a;
-    //     echo "<br>";
-    // }
-
-    $i = 1;
-
-    do {
-        echo $i;
-        echo "<br>";
-        $i++;
-    } while ($i <= 10);
-
-
-    $arr = array("bmw", "volvo", "tesla", "ford", "toyota");
-    foreach ($arr as $arr => $value) {
-        echo "$value <br>";
-    }
-
+    echo "you goat $mark out off 600. <br>";
+    echo "you goat $vmark out off 600.";
 
     ?>
 </body>
