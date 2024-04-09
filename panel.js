@@ -1,11 +1,11 @@
 let table = new DataTable('#myTable');
 
-let edits = document.getElementsByClassName('edit');
 let nameEdit = document.getElementById('nameEdit');
 let emailEdit = document.getElementById('emailEdit');
 let passEdit = document.getElementById('passwordEdit');
 let snoEdit = document.getElementById('snoEdit');
 
+let edits = document.getElementsByClassName('edit');
 Array.from(edits).forEach((element)=>{
     element.addEventListener("click", (e)=>{
         tr = e.target.parentNode.parentNode;    

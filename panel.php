@@ -22,10 +22,10 @@
   }
   if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
     if (isset($_POST['snoEdit'])) {
-      $sno = $_POST['snoEdit'];
-      $name = $_POST['nameEdit'];
-      $email = $_POST['emailEdit'];
-      $pass = $_POST['passwordEdit'];
+        $sno = $_POST['snoEdit'];
+        $name = $_POST['nameEdit'];
+        $email = $_POST['emailEdit'];
+        $pass = $_POST['passwordEdit'];
 
       $sql = "UPDATE `panel` SET `name` = '$name', `email` = '$email', `password` = '$pass' WHERE `panel`.`sno` = $sno";
       $result = mysqli_query($conn, $sql);
