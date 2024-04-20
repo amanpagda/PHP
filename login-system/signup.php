@@ -15,8 +15,8 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         $reset = "Name allready exists.";
     }else{
         if (($pass == $cpass)) {
-            
-            $sql = "INSERT INTO `users` (`name`, `password`, `date`) VALUES ('$name', '$pass', current_timestamp())";
+            $hash = password_hash($pass, PASSWORD_DEFAULT);
+            $sql = "INSERT INTO `users` (`name`, `password`, `date`) VALUES ('$name', '$hash', current_timestamp())";
             $result = mysqli_query($conn, $sql);
             if ($result) {
                 $insert = true;
