@@ -3,18 +3,18 @@
   $reset = false;
   
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include "db.php";
+    include "data.php";
     $name = $_POST['name'];
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $exitsql = "SELECT * FROM `login` WHERE name = '$name'";
+    $exitsql = "SELECT * FROM `website` WHERE name = '$name'";
     $result = mysqli_query($conn, $exitsql);
     $ai = mysqli_num_rows($result);
     if($ai > 0){
       $reset = "name allready exists.";
     }else{
-      $sql = "INSERT INTO `login` (`name`, `email`, `password`, `date`) VALUES ('$name', '$email', '$pass', current_timestamp())";
+      $sql = "INSERT INTO `website` (`name`, `email`, `password`, `date`) VALUES ('$name', '$email', '$pass', current_timestamp())";
       $result = mysqli_query($conn, $sql);
       header('location: login.php');
     }
@@ -30,7 +30,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>SignUp Form</title>
 </head>
-<body style="background-color: rgb(31, 34, 52);color: white;">
+<body style="background-image: url(assets/img\ \(4\).jpg);color: white;">
     <?php include "nav.php";?>
 
     <div class="container mt-4 fw-bold">

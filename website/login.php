@@ -1,22 +1,23 @@
 <?php
-  $insert = false;
+  $login = false;
   $reset = false;
   
   if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    include "db.php";
+    include "data.php";
     $name = $_POST['name'];
-    $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    $exitsql = "SELECT * FROM `login` WHERE name = '$name'";
-    $result = mysqli_query($conn, $exitsql);
-    $ai = mysqli_num_rows($result);
-    if($ai > 0){
-      $reset = "name allready exists.";
+    $exsql = "Select * from website where name='$name' AND password='$pass'";
+    $result = mysqli_query($conn, $exsql);
+    $num = mysqli_num_rows($result);
+    if($num == 1){
+      $login = true;
+      session_start();
+      $_SESSION['loggedin'] = true;
+      $_SESSION['name'] = $name;
+      header('location: web14/index.html');
     }else{
-      $sql = "INSERT INTO `login` (`name`, `email`, `password`, `date`) VALUES ('$name', '$email', '$pass', current_timestamp())";
-      $result = mysqli_query($conn, $sql);
-      header('location: login.php');
+      $reset = "please try again.";
     }
   }
 ?>
@@ -30,14 +31,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>SignUp Form</title>
 </head>
-<body style="background-color: rgb(31, 34, 52);color: white;">
+<body style="background-image: url(assets/img\ \(4\).jpg);color: white;">
     <?php include "nav.php";?>
 
     <div class="container mt-4 fw-bold">
       <?php
-        if ($insert) {
+        if ($login) {
           echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-          <strong>Success!</strong> You are success fully loggedin now. 
+          <strong>Success!</strong> Your information inserted now. 
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
         }
@@ -48,18 +49,14 @@
         </div>';
         }
       ?>
-        <form action="signup.php" method="post">
+        <form action="login.php" method="post">
             <div class="mb-3">
               <label class="form-label">Username</label>
               <input type="text" class="form-control" id="name" name="name">
             </div>
             <div class="mb-3">
-              <label class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" name="email">
-            </div>
-            <div class="mb-3">
               <label class="form-label">Password</label>
-              <input type="password" maxlength="8" class="form-control" id="password" name="password">
+              <input type="password" class="form-control" id="password" name="password">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-danger">Reset</button>

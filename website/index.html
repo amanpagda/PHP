@@ -1,0 +1,736 @@
+<?php
+
+session_start();
+session_unset();
+session_destroy();
+header("location: ./login.php");
+exit;
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.kodesolution.com/2023/digicod-html/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2024 05:45:25 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <title>HOME || BRASS INDUSTRIES</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <div class="preloader"></div>
+
+        <!-- header start -->
+        <header class="main-header header-style-two">
+
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="top-left">
+
+                            <ul class="list-style-one light">
+                                <li><i class="fa fa-phone"></i> <a href="tel:6295550129">(+91) 123456789</a></li>
+                                <li><i class="fa fa-envelope"></i> <a
+                                        href="https://html.kodesolution.com/cdn-cgi/l/email-protection#660f08000926031e070b160a034805090b"><span
+                                            class="__cf_email__"
+                                            data-cfemail="b2dbdcd4ddf2d7cad3dfc2ded79cd1dddf">[example@gmail.com]</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="top-right">
+                            <ul class="social-icon-one light">
+                                <li><a href="#"><span class="fab fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                                <button type="button" class="btn btn-primary ms-4"><a class="text-white" href="../login.php">Logout</a></button>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-lower">
+                <div class="auto-container">
+
+                    <div class="main-box">
+                        <div class="logo-box">
+                            <div class="logo"><a href="index.html"><img src="images/logo-3.png" alt title="Digicod"></a>
+                            </div>
+                        </div>
+
+                        <div class="nav-outer">
+                            <nav class="nav main-menu">
+                                <ul class="navigation">
+                                    <li class="current has-mega-menu"><a href="index.html">Home</a>
+                                    </li>
+                                    <li><a href="about.html">About Us</a>
+                                    <li class="dropdown"><a href="category.html">Product</a>
+                                        <ul>
+                                            <li><a href="product.html">Product Name</a></li>
+                                            <li><a href="product.html">Product Name</a></li>
+                                            <li><a href="product.html">Product Name</a></li>
+                                            <li><a href="product.html">Product Name</a></li>
+                                            <li><a href="product.html">Product Name</a></li>
+                                        </ul>
+                                    </li>
+                                    </li>
+                                    <li><a href="quality.html">Quality</a></li>
+                                    <li><a href="inquiry.html">Inquiry</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                </ul>
+                            </nav>
+
+                            <div class="outer-box">
+
+                                <a href="tel:+92(8800)9806" class="info-btn-two">
+                                    <i class="icon fa fa-phone"></i>
+                                    <small>Contact Us</small>
+                                    <strong>+91 123456789</strong>
+                                </a>
+
+                                <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+
+                <nav class="menu-box">
+                    <div class="upper-box">
+                        <div class="nav-logo"><a href="index.html"><img src="images/logo-2.png" alt title></a></div>
+                        <div class="close-btn"><i class="icon fa fa-times"></i></div>
+                    </div>
+                    <ul class="navigation clearfix">
+
+                    </ul>
+                    <ul class="contact-list-one">
+                        <li>
+                            <i class="icon lnr-icon-phone-handset"></i>
+                            <span class="title">Call Now</span>
+                            <div class="text"><a href="tel:+92880098670">+91 123456789</a></div>
+                        </li>
+                        <li>
+                            <i class="icon lnr-icon-envelope1"></i>
+                            <span class="title">Send Email</span>
+                            <div class="text"><a
+                                    href="https://html.kodesolution.com/cdn-cgi/l/email-protection#a0c8c5ccd0e0c3cfcdd0c1ced98ec3cfcd"><span
+                                        class="__cf_email__"
+                                        data-cfemail="89e1ece5f9c9eae6e4f9e8e7f0a7eae6e4">[example@gmail.com]</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon lnr-icon-map-marker"></i>
+                            <span class="title">Address</span>
+                            <div class="text">Jamnagar / India</div>
+                        </li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="search-popup">
+                <span class="search-back-drop"></span>
+                <button class="close-search"><span class="fa fa-times"></span></button>
+                <div class="search-inner">
+                    <form method="post" action="https://html.kodesolution.com/2023/digicod-html/index.html">
+                        <div class="form-group">
+                            <input type="search" name="search-field" value placeholder="Search..." required>
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="inner-container">
+
+                        <div class="logo">
+                            <a href="index.html" title><img src="images/logo.png" alt title></a>
+                        </div>
+
+                        <div class="nav-outer">
+
+                            <nav class="main-menu">
+                                <div class="navbar-collapse show collapse clearfix">
+                                    <ul class="navigation clearfix">
+
+                                    </ul>
+                                </div>
+                            </nav>
+
+                            <div class="mobile-nav-toggler"><span class="icon lnr-icon-bars"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+
+        <!-- banner section start -->
+        <section class="banner-section-twelve">
+            <div class="bg bg-image gradient-overlay" style="background-image: url(images/banner/12.jpg)"></div>
+            <div class="auto-container">
+                <div class="row">
+
+                    <div class="content-column col-lg-6">
+                        <div class="content-box">
+                            <span class="sub-title wow fadeInUp">BRASS INDUSTRIES</span>
+                            <h1 class="title wow fadeInUp" data-wow-delay="300ms">Always Greet Investor Cannot Go At The
+                                Top Level</h1>
+                            <div class="btn-box wow fadeInUp" data-wow-delay="900ms">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section-twelve pull-up pt-lg-0">
+            <div class="auto-container">
+                <div class="row">
+
+                    <div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="icon flaticon-puzzle"></i></div>
+                            <h4 class="title"><a href="page-service-details.html">A Rich Tradition of Brass
+                                    Knowledge</a></h4>
+                            <div class="text paraone">Our company has a rich history entrenched in the brass sector,
+                                which gives us a lot of knowledge and experience. </div>
+                        </div>
+                    </div>
+
+                    <div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="icon flaticon-cog-1"></i></div>
+                            <h4 class="title"><a href="page-service-details.html">Modern Technology Blends with
+                                    Tradition</a></h4>
+                            <div class="text paraone">Our cutting-edge facilities and metallurgical know-how guarantee
+                                that we stay at the forefront of the sector.</div>
+                        </div>
+                    </div>
+
+                    <div class="service-block-twelve col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="inner-box">
+                            <div class="icon-box"><i class="icon flaticon-promotion"></i></div>
+                            <h4 class="title"><a href="page-service-details.html">The Customer-Centric Philosophy</a>
+                            </h4>
+                            <div class="text paraone">We collaborate closely with them to deliver customized brass
+                                solutions that surpass their expectations since we are aware of their particular needs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner section end -->
+
+        <!-- section 1 start -->
+        <section class="about-section-two">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="content-column col-xl-6 col-lg-6 wow" data-wow-delay="600ms">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <span class="sub-title">BRASS INDUSTRIES</span>
+                                <h2>About Us </h2>
+                                <div class="text paraone">Welcome to Digicod Brass Industry, your premier destination
+                                    for high-quality brass products and exceptional craftsmanship. With a legacy
+                                    spanning over [number] years, we have established ourselves as a trusted name in the
+                                    brass industry, renowned for our commitment to excellence and customer satisfaction.
+                                </div>
+
+                                <div class="text paraone">Driven by innovation and a passion for perfection, we
+                                    continuously invest in research and development to stay at the forefront of the
+                                    brass manufacturing industry. Our team of skilled engineers and technicians leverage
+                                    their expertise to design and produce innovative solutions that address the evolving
+                                    needs of our customers, delivering unparalleled value and performance.</div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-column col-xl-6 col-lg-6">
+                        <div class="inner-column wow ">
+                            <span class="icon-dots-4 bounce-y"></span>
+                            <figure class="image overlay-anim wow fadeInUp"><img src="images/resource/about2-1.jpg" alt>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- section 1 end -->
+
+        <!-- section 2 start -->
+        <section class="process-section-three">
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <span class="sub-title">BRASS INDUSTRIES</span>
+                    <h2>Crafting digital strategies
+                        <br> that work
+                    </h2>
+                </div>
+                <div class="row">
+
+                    <div class="process-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
+                        <div class="inner-box">
+                            <span class="count">01</span>
+                            <h4 class="title">Superior Quality</h4>
+                            <div class="text paraone">We place the utmost importance on quality standards in all of our
+                                products, guaranteeing dependability and longevity.</div>
+                        </div>
+                    </div>
+
+                    <div class="process-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="inner-box">
+                            <span class="count">02</span>
+                            <h4 class="title">Customized Remedies</h4>
+                            <div class="text paraone">Our products and services provide solutions and are customized to
+                                meet the specific needs of our customers.</div>
+                        </div>
+                    </div>
+
+                    <div class="process-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="600ms">
+                        <div class="inner-box">
+                            <span class="count">03</span>
+                            <h4 class="title">Modern Technology</h4>
+                            <div class="text paraone">We leverage state-of-the-art technology and machinery to deliver
+                                superior products with precision and efficiency.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 2 end -->
+
+        <!-- faq start -->
+        <section class="faqs-section-two">
+            <div class="auto-container">
+                <div class="row">
+
+                    <div class="image-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <figure class="image"><img src="images/resource/faq2-1.jpg" alt></figure>
+                            <div class="info-box">
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="30">0</span>+</div>
+                                <h4 class="sub-title">Years of Experience</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-column col-xl-6 col-lg-12 order-2">
+                        <div class="inner-column">
+                            <div class="sec-title">
+                                <span class="sub-title">BRASS INDUSTRIES</span>
+                                <h2>Brass FAQs</h2>
+                            </div>
+                            <ul class="accordion-box style-two wow fadeInRight">
+
+                                <li class="accordion block active-block">
+                                    <div class="acc-btn active">How do I place an order? <div class="icon fa fa-plus">
+                                        </div>
+                                    </div>
+                                    <div class="acc-content current">
+                                        <div class="content">
+                                            <div class="text paraone">Visit our online catalog, select your products,
+                                                and follow the simple ordering process. Need help? Contact our customer
+                                                support.</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="accordion block">
+                                    <div class="acc-btn">Which industries do you serve? <div class="icon fa fa-plus">
+                                        </div>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <div class="text paraone">Automotive, plumbing, electrical – we cater to
+                                                various industries with precision brass components.</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="accordion block">
+                                    <div class="acc-btn">Can I request custom solutions? <div class="icon fa fa-plus">
+                                        </div>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <div class="text paraone">Absolutely! Contact us for personalized brass
+                                                solutions tailored to your project.</div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="accordion block">
+                                    <div class="acc-btn">What makes Digicod Brass stand out? <div
+                                            class="icon fa fa-plus"></div>
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <div class="text paraone">Our commitment to excellence, advanced technology,
+                                                and customer satisfaction sets us apart.</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- faq end -->
+
+        <!-- counter start -->
+        <section class="fun-fact-section-six pb-lg-4">
+            <div class="anim-icons">
+                <span class="icon icon-circle-lines"></span>
+            </div>
+            <div class="auto-container">
+                <div class="fact-counter">
+                    <div class="row">
+
+                        <div class="counter-block-six col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
+                            <div class="inner">
+                                <i class="icon flaticon-workers"></i>
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="50">0</span>+</div>
+                                <h6 class="counter-title">Team Member</h6>
+                            </div>
+                        </div>
+
+                        <div class="counter-block-six col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+                            data-wow-delay="300ms">
+                            <div class="inner">
+                                <i class="icon fa-solid fa-box"></i>
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="100">0</span></div>
+                                <h6 class="counter-title">Our Products</h6>
+                            </div>
+                        </div>
+
+                        <div class="counter-block-six col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+                            data-wow-delay="600ms">
+                            <div class="inner">
+                                <i class="icon flaticon-bar-chart-1"></i>
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="30">0</span>+</div>
+                                <h6 class="counter-title">
+                                    Years Of Experience</h6>
+                            </div>
+                        </div>
+
+                        <div class="counter-block-six col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
+                            data-wow-delay="900ms">
+                            <div class="inner">
+                                <i class="icon flaticon-love-planet"></i>
+                                <div class="count-box"><span class="count-text" data-speed="3000"
+                                        data-stop="900">0</span></div>
+                                <h6 class="counter-title">Client Review</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- counter end -->
+
+        <!-- section 3 start -->
+        <section class="contact-section-six pt-2">
+            <div class="auto-container">
+                <div class="row">
+
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2 wow fadeInRight"
+                        data-wow-delay="300ms">
+                        <div class="inner-column">
+                            <div class="sec-title light mb-0">
+                                <span class="sub-title">BRASS INDUSTRIES</span>
+                                <h2>Discovering Brass: Our Story</h2>
+                                <div class="text paraone">Founded on the principles of quality and customer
+                                    satisfaction, Digicod Brass has evolved into a trusted name across diverse
+                                    industries, including automotive, plumbing, and electrical. Our state-of-the-art
+                                    facilities and cutting-edge technologies reflect our dedication to staying at the
+                                    forefront of the brass industry, ensuring that each product bears the hallmark of
+                                    durability and precision.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image-column col-lg-6 col-md-12 wow fadeInLeft">
+                        <div class="inner-column">
+                            <div class="image-box">
+                                <figure class="image overlay-anim"><img src="images/resource/contact6-1.jpg" alt>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 3 end -->
+
+        <!-- slider start -->
+        <section class="projects-section-four">
+            <div class="auto-container">
+                <div class="sec-title">
+                    <span class="sub-title">BRASS INDUSTRIES</span>
+                    <h2>Product Category</h2>
+                </div>
+                <div class="carousel-outer">
+                    <div class="project-carousel owl-carousel owl-theme default-navs-two">
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-1.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-2.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-3.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-4.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-5.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-1.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-2.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-3.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-4.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-block-four">
+                            <div class="inner-box">
+                                <figure class="image"><a href="#"><img src="images/resource/project4-5.jpg" alt></a>
+                                </figure>
+                                <div class="info-box">
+                                    <i class="icon fa fa-angles-right"></i>
+                                    <h6 class="title"><a href="#">Product Name</a></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- slider end -->
+
+        <!-- footer start -->
+        <footer class="main-footer footer-style-five">
+            <div class="bg footer-bg-5"></div>
+
+            <div class="widgets-section">
+                <div class="auto-container">
+                    <div class="row">
+                        <div class="footer-column col-xl-3 col-lg-6 col-md-6">
+                            <div class="footer-widget about-widget">
+                                <div class="logo"><a href="#"><img src="images/logo-5.png" alt></a></div>
+                                <div class="text">Lorem ipsum dolor sit amet consectetur. Hac tortor erat neque nid
+                                    nibh. Pretium lectus risus eget mons interdum</div>
+                                <ul class="social-icon-three light">
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="footer-column ps-lg-5 col-xl-3 col-lg-6 col-md-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Quick Links</h4>
+                                <div class="widget-content">
+                                    <ul class="user-links style-two">
+                                        <li><a href="#">Home</a></li>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Product</a></li>
+                                        <li><a href="#">Quality</a></li>
+                                        <li><a href="#">Inquiry</a></li>
+                                        <li><a href="#">Contact Us</a></li>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-column col-xl-3 col-lg-6 col-md-6">
+                            <div class="footer-widget links-widget">
+                                <h4 class="widget-title">Product Categories</h4>
+                                <div class="widget-content">
+                                    <ul class="user-links style-two">
+                                        <li><a href="#">Product Name</a></li>
+                                        <li><a href="#">Product Name</a></li>
+                                        <li><a href="#">Product Name</a></li>
+                                        <li><a href="#">Product Name</a></li>
+                                        <li><a href="#">Product Name</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-column col-xl-3 col-lg-6 col-md-6">
+                            <div class="footer-widget contact-widget">
+                                <h4 class="widget-title">Contact Us</h4>
+                                <div class="widget-content">
+                                    <ul class="contact-list-four">
+                                        <li class="contact-info">
+                                            <span class="icon fa fa-phone"></span>
+                                            <span class="title">Phone</span>
+                                            <div class="text"><a href="tel:+92880098670">+91 123456789</a></div>
+                                        </li>
+                                        <li class="contact-info">
+                                            <span class="icon fa fa-envelope"></span>
+                                            <span class="title">E-mail</span>
+                                            <div class="text"><a href="#"><span class="__cf_email__"
+                                                        data-cfemail="cfb6a0babda2aea6a38fa8a2aea6a3e1aca0a2">[Example@gmail.com]</span></a>
+                                            </div>
+                                        </li>
+                                        <li class="contact-info">
+                                            <i class="icon fa fa-map-marker"></i>
+                                            <span class="title">Location</span>
+                                            <div class="text">Jamnagar / India</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="copyright-text">All Rights Reserved © 2024<a href="index-2.html"
+                                class="fw-bold text-white"> Brass Industries. </a></div>
+                        <ul class="footer-nav">
+                            <div class="copyright-text">|| develop by<a href="https://webworlddeveloping.com/"
+                                    target="_blank" class="fw-bold pe-lg-5"> Web World Developing</a></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer end -->
+
+    </div>
+
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></div>
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/appear.js"></script>
+    <script src="js/mixitup.js"></script>
+    <script src="js/owl.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+<!-- Mirrored from html.kodesolution.com/2023/digicod-html/index-2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Mar 2024 05:45:32 GMT -->
+
+</html>
