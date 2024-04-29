@@ -15,7 +15,7 @@
       session_start();
       $_SESSION['loggedin'] = true;
       $_SESSION['name'] = $name;
-      header('location: web14/index.html');
+      header('location: V-TECH - Copy/home.html');
     }else{
       $reset = "please try again.";
     }
