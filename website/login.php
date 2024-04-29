@@ -15,7 +15,7 @@
       session_start();
       $_SESSION['loggedin'] = true;
       $_SESSION['name'] = $name;
-      header('location: V-TECH - Copy/home.html');
+      header('location: home.html');
     }else{
       $reset = "please try again.";
     }

@@ -13,8 +13,12 @@ include "data.php";
         move_uploaded_file($img, $path_loca);
 
         if (($path!='png') && ($path!='jpg') && ($path!='jpeg') && ($path!='webp')) {
-            echo "<script>alert('Invalid Image Extension')</script>";
-            exit;
+            header('location: index.php')
+            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Invalid Extention!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>';
+            exit();
         } else {
 
             $sql = "INSERT INTO `watermark` (`name`, `profile`) VALUES ('$uname', '$path_loca')";
@@ -23,7 +27,7 @@ include "data.php";
             }else{
                 echo "<script>alert('Unsuccessful')</script>";
             }
-            
+
         }
     }
 
