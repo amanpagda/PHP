@@ -22,9 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sno = $_POST['snoedit'];
         $name = $_POST['nameEdit'];
         $email = $_POST['emailEdit'];
-        $pass = $_POST['passwordEdit'];
 
-        $sql = "UPDATE `login` SET `name` = '$name', `email` = '$email', `password` = '$pass' WHERE `login`.`sno` = $sno";
+        $sql = "UPDATE `login` SET `name` = '$name', `email` = '$email' WHERE `login`.`sno` = $sno";
         $result = mysqli_query($conn, $sql);
         
     }else{

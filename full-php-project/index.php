@@ -35,10 +35,6 @@ include "p1.php";
                             <label for="email" class="form-label">Email address</label>
                             <input type="email" class="form-control" id="emailEdit" name="emailEdit">
                         </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input type="password" class="form-control" id="passwordEdit" name="passwordEdit">
-                        </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -61,11 +61,6 @@
 
 <body style="background-color: rgb(80, 80, 80);" class="fw-bold text-white">
 
-  <!-- modal start -->
-  <!-- Button trigger modal -->
-  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
-  Launch demo modal
-</button> -->
 
   <!-- Modal -->
   <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -121,7 +116,7 @@
   <!-- navbar end -->
 
   <!-- form start -->
-  <div class="container mt-3">
+  <!-- <div class="container mt-3">
     <form action="panel.php" method="post">
       <div class="mb-3">
         <label class="form-label">Name</label>
@@ -137,7 +132,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </div>
+  </div> -->
   <!-- form end -->
 
   <!-- Table start -->

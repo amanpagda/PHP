@@ -9,25 +9,27 @@ include "data.php";
         $uname = $_POST['name'];
         $path = pathinfo($img_name, PATHINFO_EXTENSION);
         $path_loca = 'location/'.$uname.'.'.$path;
+        $img_size = $_FILES['profile']['size']/(1024*1024);
 
         move_uploaded_file($img, $path_loca);
 
+        
         if (($path!='png') && ($path!='jpg') && ($path!='jpeg') && ($path!='webp')) {
-            header('location: index.php')
-            echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-            <strong>Invalid Extention!</strong>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>';
+            echo "<script>alert('Invalid Extention!')</script>";
             exit();
-        } else {
+        }
+        
+        if($img_size>3){
+            echo "<script>alert('less than 1MB image.')</script>";
+            exit();
+        }
 
-            $sql = "INSERT INTO `watermark` (`name`, `profile`) VALUES ('$uname', '$path_loca')";
-            if(mysqli_query($conn, $sql)){
-                echo "<script>alert('Successful')</script>";
-            }else{
-                echo "<script>alert('Unsuccessful')</script>";
-            }
 
+        $sql = "INSERT INTO `watermark` (`name`, `profile`) VALUES ('$uname', '$path_loca')";
+        if(mysqli_query($conn, $sql)){
+            echo "<script>alert('Successful')</script>";
+        }else{
+            echo "<script>alert('Unsuccessful')</script>";
         }
     }
 
@@ -61,7 +63,37 @@ include "data.php";
         </form>
     </div>
 
+    <div class="container text-white">
+        <table class="table">
+            <thead>
+                <tr class="text-white text-center">
+                    <th scope="col">Number</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Photos</th>
+                </tr>
+            </thead>
+            <tbody>
 
+                <?php
+                $sql = "SELECT * FROM `watermark`"; 
+                $result = mysqli_query($conn, $sql);
+                $sno = 0;
+                while($i = mysqli_fetch_assoc($result)){
+                    $sno += 1;
+                    echo "
+                    <tr class='text-white text-center'>
+                        <td>$sno</td>
+                        <td>$i[name]</td>
+                        <td><img src='$i[profile]' width='100px'></td>
+                    </tr>
+                    ";
+                }
+                
+                ?>
+                
+            </tbody>
+        </table>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
