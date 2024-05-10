@@ -116,7 +116,7 @@
   <!-- navbar end -->
 
   <!-- form start -->
-  <!-- <div class="container mt-3">
+  <div class="container mt-3">
     <form action="panel.php" method="post">
       <div class="mb-3">
         <label class="form-label">Name</label>
@@ -132,7 +132,7 @@
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
-  </div> -->
+  </div>
   <!-- form end -->
 
   <!-- Table start -->
