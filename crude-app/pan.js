@@ -1,5 +1,3 @@
-let table = new DataTable('#myTable');
-
 let nameEdit = document.getElementById('editname');
 let priceEdit = document.getElementById('editprice');
 let dascEdit = document.getElementById('editdesc');
@@ -9,30 +7,18 @@ let idEdit = document.getElementById('idEdit');
 let edits = document.getElementsByClassName('edit');
 Array.from(edits).forEach((element)=>{
     element.addEventListener("click", (e)=>{
+        console.log(e.target.parentNode.parentNode);
         tr = e.target.parentNode.parentNode;    
         name = tr.getElementsByTagName('td')[0].innerText;
         price = tr.getElementsByTagName('td')[1].innerText;
-        role = tr.getElementsByTagName('td')[2].innerText;
+        desc = tr.getElementsByTagName('td')[2].innerText;
         image = tr.getElementsByTagName('td')[3].innerText;
         nameEdit.value = name;
         priceEdit.value = price;
-        roleEdit.value = role;
+        dascEdit.value = desc;
         editimageEdit.value = image;
         idEdit.value = e.target.id;
         console.log(e.target.id);
-        $('#editModal').modal('toggle');
+        $('#editproduct').modal('toggle');
     })
 })
-
-// let deletes = document.getElementsByClassName('delete');
-// Array.from(deletes).forEach((element)=>{
-//     element.addEventListener("click", (e)=>{
-//         sno = e.target.id.substr(1,);
-//         if (confirm("Do You Want To Delete!")) {
-//             console.log('yes');
-//             window.location = `/php/crude-app/info.php?delete=${sno}`;
-//         }else{
-//             console.log('no');
-//         }
-//     })
-// })

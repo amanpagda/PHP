@@ -84,5 +84,17 @@ if (isset($_GET['rem']) && $_GET['rem']>0){
 
 }
 
+if (isset($_POSt["update_product"])){
+
+    $name = $_POST['editname'];
+    $price = $_POST['editprice'];
+    $desc = $_POST['editdesc'];
+    $image = $_POST['editimage'];
+}
+
+
+// watermark in image
+
+header('content-type: image/png');
 
 ?>
