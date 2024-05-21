@@ -1,4 +1,4 @@
-<?php include ("data.php"); ?>
+<?php include ("db.php"); ?>
 
 <!doctype html>
 <html lang="en">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Description</span>
-                            <textarea class="form-control" name="description" required></textarea>
+                            <textarea class="form-control" name="desc" required></textarea>
                         </div>
                         <div class="input-group mb-3">
                             <input type="file" class="form-control" name="image" accept=".jpg, .png, .jpeg, .svg"
@@ -79,29 +79,28 @@
             </thead>
             <tbody>
                 <?php
-                $con = mysqli_connect("localhost", "root", "", "crude");
+
                 $sql = "SELECT * FROM `crude`";
                 $result = mysqli_query($con, $sql);
+                $fetch_src = FETCH_SRC;
                 $i = 0;
-                if(mysqli_num_rows($result) > 0){
+                while ($a = mysqli_fetch_assoc($result)) {
                     $i += 1;
-                    foreach($result as $row){
-                        ?>
-                        <tr class="align-middle text-center">
-                            <td><?php echo $i;?></td>
-                            <td><?php echo $row["name"];?></td>
-                            <td><?php echo $row["price"];?></td>
-                            <td><?php echo $row["description"];?></td>
-                            <td><img src="<?php echo 'upload/'.$row["image"];?>" alt="image" width="150px"></td>
-                            <td> 
-                                <a href=<?php echo "info.php?id=$row[id]"?> class='btn btn-primary'>
-                                    Edit
-                                </a>
-                                <button onclick="confirm_rem($row[id])" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <?php
-                    }
+                    echo <<<EOD
+                    <tr class="align-middle text-center">
+                        <th scope="row">$i</th>
+                        <td>$a[name]</td>
+                        <td>$a[price]</td>
+                        <td>$a[description]</td>
+                        <td><img src="$fetch_src$a[image]" width="150px"></td>
+                        <td>
+                            <button class='btn edit btn-primary' id="$a[id]">
+                                Edit
+                            </button>
+                            <button onclick="confirm_rem($a[id])" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    EOD;
                 }
 
                 ?>
@@ -111,44 +110,46 @@
     </div>
     <!-- table end -->
 
-   <!-- Modal start -->
-   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    <!--Edit Modal start -->
+    <div class="modal fade" id="editproduct" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
         aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add Product</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Edit Product</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="data.php" method="post" enctype="multipart/form-data">
+                <form action="data.php" method="post"  enctype="multipart/form-data">
                     <div class="modal-body">
+                        <input type="hidden" name="idEdit" id="idEdit">
                         <div class="input-group mb-3">
                             <span class="input-group-text">Name</span>
-                            <input type="text" class="form-control" name="name" required>
+                            <input type="text" class="form-control" name="editname" id="editname" required>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Price</span>
-                            <input type="number" class="form-control" name="price" min="1" required>
+                            <input type="number" class="form-control" name="editprice" id="editprice" min="1" required>
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">Description</span>
-                            <textarea class="form-control" name="desc" required></textarea>
+                            <textarea class="form-control" name="editdesc" id="editdesc" required></textarea>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="file" class="form-control" name="image" accept=".jpg, .png, .jpeg, .svg"
-                                required>
+                            <input type="file" class="form-control" id="editimage" name="editimage" accept=".jpg, .png, .jpeg, .svg">
                             <label class="input-group-text">Images</label>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-success" name="add">ADD</button>
+                        <button type="submit" class="btn btn-success" name="update_product">Update</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <!-- Modal end -->
+    <!--Edit Modal end -->
+
+   
     
 
     
@@ -159,6 +160,12 @@
     <script>
 
         let table = new DataTable('#myTable');
+
+        function confirm_rem(id) {
+            if (confirm("you want to delete this product in list?")) {
+                window.location.href = "data.php?rem=" + id;
+            }
+        }
 
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
